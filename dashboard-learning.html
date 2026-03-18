@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Learning Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-layout learning-dashboard">
+    <aside class="student-sidebar" aria-label="Sidebar">
+      <div class="sidebar-brand">
+        <span class="sidebar-brand-icon" aria-hidden="true">SF</span>
+        <div>
+          <h1>SkillForge</h1>
+          <p>AI-Powered Learning</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <a class="sidebar-link" href="dashboard.html"><span class="nav-icon" aria-hidden="true">&#8962;</span>Dashboard</a>
+        <a class="sidebar-link active" href="dashboard-learning.html"><span class="nav-icon" aria-hidden="true">&#128214;</span>Learning</a>
+        <a class="sidebar-link" href="dashboard-exam-generator.html"><span class="nav-icon" aria-hidden="true">&#128196;</span>Exam Generator</a>
+        <a class="sidebar-link" href="dashboard-progress.html"><span class="nav-icon" aria-hidden="true">&#128200;</span>Progress</a>
+        <a class="sidebar-link" href="dashboard-settings.html"><span class="nav-icon" aria-hidden="true">&#9881;</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-row">
+          <span class="sidebar-user-avatar">JD</span>
+          <div>
+            <h4>John Doe</h4>
+            <p>Student</p>
+          </div>
+        </div>
+        <a class="sidebar-logout sidebar-logout-wide" href="login.html">Logout</a>
+      </div>
+    </aside>
+
+    <section class="student-main learning-main">
+      <div class="learning-grid">
+        <aside class="learning-left">
+          <article class="panel-card learning-topics">
+            <header class="panel-head">
+              <h3>Learning Topics</h3>
+            </header>
+
+            <div class="topic-list">
+              <article class="topic-item active">
+                <div class="topic-head">
+                  <h4>Async Programming</h4>
+                  <span class="topic-tag intermediate">Intermediate</span>
+                </div>
+                <div class="topic-track"><span style="width:67%"></span></div>
+                <p>67% Complete</p>
+              </article>
+
+              <article class="topic-item">
+                <div class="topic-head">
+                  <h4>React Hooks</h4>
+                  <span class="topic-tag beginner">Beginner</span>
+                </div>
+                <div class="topic-track"><span style="width:42%"></span></div>
+                <p>42% Complete</p>
+              </article>
+
+              <article class="topic-item">
+                <div class="topic-head">
+                  <h4>System Design</h4>
+                  <span class="topic-tag advanced">Advanced</span>
+                </div>
+                <div class="topic-track"><span style="width:89%"></span></div>
+                <p>89% Complete</p>
+              </article>
+
+              <article class="topic-item">
+                <div class="topic-head">
+                  <h4>Data Structures</h4>
+                  <span class="topic-tag intermediate">Intermediate</span>
+                </div>
+                <div class="topic-track"><span style="width:25%"></span></div>
+                <p>25% Complete</p>
+              </article>
+            </div>
+          </article>
+
+          <article class="panel-card ai-tutor-card">
+            <div>
+              <header class="ai-tutor-head">
+                <span class="ai-tutor-icon" aria-hidden="true">AI</span>
+                <h3>AI Tutor</h3>
+              </header>
+              <p>Need help? AI tutor is available 24/7 to explain concepts, review answers, and guide your next step.</p>
+              <ul class="ai-tutor-points">
+                <li>Step-by-step explanations</li>
+                <li>Personalized practice hints</li>
+                <li>Quick doubt resolution</li>
+              </ul>
+            </div>
+            <button type="button" class="ai-tutor-btn">Ask AI Tutor</button>
+          </article>
+        </aside>
+
+        <section class="learning-content">
+          <article class="panel-card learning-module">
+            <div class="module-header">
+              <div>
+                <h2>Async Programming</h2>
+                <p>Module 4: Advanced Patterns</p>
+              </div>
+              <div class="module-progress">
+                <div class="module-ring" aria-hidden="true"></div>
+                <div>
+                  <strong>67%</strong>
+                  <span>Progress</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-tabs">
+              <button type="button" class="module-tab tab-green">Intro</button>
+              <button type="button" class="module-tab tab-green">Promises</button>
+              <button type="button" class="module-tab active">Async/Await</button>
+              <button type="button" class="module-tab">Error Handling</button>
+              <button type="button" class="module-tab">Practice</button>
+              <button type="button" class="module-tab">Quiz</button>
+            </div>
+          </article>
+
+          <article class="panel-card practice-card">
+            <header class="panel-head">
+              <h3>Interactive Practice</h3>
+              <p class="muted-note">Question 1 of 2</p>
+            </header>
+
+            <section class="question-block">
+              <div class="question-title">
+                <span class="question-number">1</span>
+                <h4>What is the main purpose of the async/await syntax in JavaScript?</h4>
+              </div>
+              <div class="option-list">
+                <button type="button" class="option-btn">To make synchronous code run faster</button>
+                <button type="button" class="option-btn selected">To write asynchronous code in a more readable, synchronous-looking way</button>
+                <button type="button" class="option-btn">To replace all callback functions</button>
+                <button type="button" class="option-btn">To eliminate the need for Promises</button>
+              </div>
+            </section>
+
+            <section class="hint-box">
+              <h4>AI Hint</h4>
+              <p>Think about how async/await helps developers avoid callback hell and makes asynchronous code easier to read and maintain.</p>
+            </section>
+
+            <div class="practice-actions">
+              <button type="button" class="ghost-action">Skip Question</button>
+              <div class="action-right">
+                <button type="button" class="outline-action">Check Answer</button>
+                <button type="button" class="filled-action">Next Question</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel-card adaptive-card">
+            <header class="adaptive-head">
+              <span class="adaptive-icon" aria-hidden="true">AI</span>
+              <div>
+                <h3>Adaptive Learning Insights</h3>
+                <p>AI is adjusting difficulty based on your performance</p>
+              </div>
+            </header>
+            <div class="adaptive-grid">
+              <article class="adaptive-metric green">
+                <strong>85%</strong>
+                <p>Accuracy</p>
+              </article>
+              <article class="adaptive-metric blue">
+                <strong>2.3m</strong>
+                <p>Avg. Time</p>
+              </article>
+              <article class="adaptive-metric violet">
+                <strong>Level 3</strong>
+                <p>Difficulty</p>
+              </article>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+

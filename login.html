@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="auth.js"></script>
+</head>
+<body>
+  <main class="page">
+    <section class="role-switch">
+      <div class="role-wrap">
+        <button class="role active" data-role="Student">
+          <span class="role-title">Student</span>
+          <span class="role-sub">Learn & Grow</span>
+        </button>
+      </div>
+
+      <div class="role-wrap has-hover-options">
+        <button class="role" data-role="Admin">
+          <span class="role-title">Admin</span>
+          <span class="role-sub">Manage Platform</span>
+        </button>
+        <div class="hover-options">
+          <button class="hover-option" data-role="Admin" data-mode="login">Admin Login</button>
+          <button class="hover-option" data-role="Admin" data-mode="signup">Admin Sign Up</button>
+        </div>
+      </div>
+
+      <div class="role-wrap has-hover-options">
+        <button class="role" data-role="Trainer">
+          <span class="role-title">Trainer</span>
+          <span class="role-sub">Teach & Create</span>
+        </button>
+        <div class="hover-options">
+          <button class="hover-option" data-role="Trainer" data-mode="login">Trainer Login</button>
+          <button class="hover-option" data-role="Trainer" data-mode="signup">Trainer Sign Up</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="portal">
+      <div class="left-card">
+        <div class="brand">
+          <div class="brand-icon" aria-hidden="true">SF</div>
+          <div>
+            <h1>SkillForge</h1>
+            <p id="portalLabel">Student Portal</p>
+          </div>
+        </div>
+
+        <h2 id="portalHeading">Access your personalized learning journey</h2>
+        <p class="lead">
+          Experience adaptive learning powered by AI. Generate personalized exams,
+          track your progress, and master new skills faster than ever.
+        </p>
+
+        <ul class="features">
+          <li>AI-Adaptive Learning Modules</li>
+          <li>Personalized Exam Generation</li>
+          <li>Progress Tracking and Insights</li>
+        </ul>
+      </div>
+
+      <div class="right-card">
+        <div class="auth-tabs">
+          <button class="tab active" id="loginTab" type="button">Login</button>
+          <button class="tab" id="signupTab" type="button">Sign Up</button>
+        </div>
+
+        <p class="selected-role">Selected role: <strong id="selectedRoleText">Student</strong></p>
+        <p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+        <form class="form" id="loginForm" novalidate>
+          <label for="loginEmail">Email Address</label>
+          <input id="loginEmail" type="email" placeholder="you@example.com" required />
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" placeholder="Enter password" required minlength="6" />
+
+          <div class="row">
+            <label class="remember">
+              <input type="checkbox" id="rememberMe" />
+              Remember me
+            </label>
+            <a href="#" class="link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="login-btn" id="loginBtn">Login as Student</button>
+        </form>
+
+        <form class="form hidden" id="signupForm" novalidate>
+          <label for="signupName">Full Name</label>
+          <input id="signupName" type="text" placeholder="Your full name" required />
+
+          <label for="signupEmail">Email Address</label>
+          <input id="signupEmail" type="email" placeholder="you@example.com" required />
+
+          <label for="signupPassword">Password</label>
+          <input id="signupPassword" type="password" placeholder="Create password" required minlength="6" />
+
+          <label for="signupConfirmPassword">Confirm Password</label>
+          <input id="signupConfirmPassword" type="password" placeholder="Repeat password" required minlength="6" />
+
+          <button type="submit" class="login-btn" id="signupBtn">Create Student Account</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var roleButtons = Array.from(document.querySelectorAll(".role"));
+      var hoverOptionButtons = Array.from(document.querySelectorAll(".hover-option"));
+      var loginTab = document.getElementById("loginTab");
+      var signupTab = document.getElementById("signupTab");
+      var selectedRoleText = document.getElementById("selectedRoleText");
+      var portalLabel = document.getElementById("portalLabel");
+      var portalHeading = document.getElementById("portalHeading");
+      var statusMessage = document.getElementById("statusMessage");
+      var loginForm = document.getElementById("loginForm");
+      var signupForm = document.getElementById("signupForm");
+      var loginBtn = document.getElementById("loginBtn");
+      var signupBtn = document.getElementById("signupBtn");
+
+      var state = {
+        role: "Student",
+        mode: "login"
+      };
+
+// Check if already logged in - COMMENTED OUT to prevent auto-redirect
+      /*
+      if (window.SkillForgeAuth && window.SkillForgeAuth.isAuthenticated()) {
+        var user = window.SkillForgeAuth.getCurrentUser();
+        var targetPage = "dashboard.html";
+        if (user.role === "Admin") {
+          targetPage = "admin-dashboard-overview.html";
+        } else if (user.role === "Trainer") {
+          targetPage = "trainer-dashboard.html";
+        }
+        window.location.href = targetPage + "?user=" + encodeURIComponent(user.name);
+        return;
+      }
+      */
+
+      function openDashboard(role, name) {
+        var page = "dashboard.html";
+
+        if (role === "Admin") {
+          page = "admin-dashboard-overview.html";
+        } else if (role === "Trainer") {
+          page = "trainer-dashboard.html";
+        }
+
+        var target = page + "?user=" + encodeURIComponent(name);
+        window.location.href = target;
+      }
+
+      function setMessage(message, type) {
+        statusMessage.textContent = message;
+        statusMessage.className = "status-message " + type;
+      }
+
+      function clearMessage() {
+        statusMessage.textContent = "";
+        statusMessage.className = "status-message";
+      }
+
+      function setMode(mode) {
+        state.mode = mode;
+        var loginActive = mode === "login";
+        loginTab.classList.toggle("active", loginActive);
+        signupTab.classList.toggle("active", !loginActive);
+        loginForm.classList.toggle("hidden", !loginActive);
+        signupForm.classList.toggle("hidden", loginActive);
+        clearMessage();
+      }
+
+      function setRole(role) {
+        state.role = role;
+        roleButtons.forEach(function (button) {
+          button.classList.toggle("active", button.dataset.role === role);
+        });
+        selectedRoleText.textContent = role;
+        portalLabel.textContent = role + " Portal";
+        portalHeading.textContent = "Access your " + role.toLowerCase() + " workspace";
+        loginBtn.textContent = "Login as " + role;
+        signupBtn.textContent = "Create " + role + " Account";
+        clearMessage();
+      }
+
+      roleButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setRole(button.dataset.role);
+        });
+      });
+
+      hoverOptionButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setRole(button.dataset.role);
+          setMode(button.dataset.mode);
+        });
+      });
+
+      loginTab.addEventListener("click", function () {
+        setMode("login");
+      });
+
+      signupTab.addEventListener("click", function () {
+        setMode("signup");
+      });
+
+      loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var emailField = document.getElementById("loginEmail");
+        var passwordField = document.getElementById("loginPassword");
+        var rememberMe = document.getElementById("rememberMe").checked;
+        
+        var email = emailField.value.trim();
+        var password = passwordField.value;
+
+        if (!email || !password) {
+          setMessage("Enter email and password.", "error");
+          return;
+        }
+
+        var result = window.SkillForgeAuth.login(email, password, state.role, rememberMe);
+        
+        if (!result.success) {
+          setMessage(result.message, "error");
+          return;
+        }
+
+        setMessage("Login successful. Welcome back, " + result.user.name + ".", "success");
+        loginForm.reset();
+        setTimeout(function() {
+          openDashboard(state.role, result.user.name);
+        }, 500);
+      });
+
+      signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var nameField = document.getElementById("signupName");
+        var emailField = document.getElementById("signupEmail");
+        var passwordField = document.getElementById("signupPassword");
+        var confirmField = document.getElementById("signupConfirmPassword");
+
+        var name = nameField.value.trim();
+        var email = emailField.value.trim();
+        var password = passwordField.value;
+        var confirmPassword = confirmField.value;
+
+        if (!name || !email || !password || !confirmPassword) {
+          setMessage("Fill all sign up fields.", "error");
+          return;
+        }
+
+        if (password.length < 6) {
+          setMessage("Password must be at least 6 characters.", "error");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          setMessage("Passwords do not match.", "error");
+          return;
+        }
+
+        var result = window.SkillForgeAuth.register(name, email, password, state.role);
+        
+        if (!result.success) {
+          setMessage(result.message, "error");
+          return;
+        }
+
+        setMessage("Account created for " + state.role + ". You can login now.", "success");
+        signupForm.reset();
+        
+        // Auto-login after registration
+        setTimeout(function() {
+          var loginResult = window.SkillForgeAuth.login(email, password, state.role, false);
+          if (loginResult.success) {
+            openDashboard(state.role, name);
+          } else {
+            setMode("login");
+          }
+        }, 1000);
+      });
+
+      setRole("Student");
+      setMode("login");
+    })();
+  </script>
+</body>
+</html>
+

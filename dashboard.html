@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Main Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+<script src="auth.js"></script>
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-layout main-dashboard-home">
+    <aside class="student-sidebar" aria-label="Sidebar">
+      <div class="sidebar-brand">
+        <span class="sidebar-brand-icon" aria-hidden="true">SF</span>
+        <div>
+          <h1>SkillForge</h1>
+          <p>AI-Powered Learning</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <a class="sidebar-link active" href="dashboard.html"><span class="nav-icon" aria-hidden="true">&#8962;</span>Dashboard</a>
+        <a class="sidebar-link" href="dashboard-learning.html"><span class="nav-icon" aria-hidden="true">&#128214;</span>Learning</a>
+        <a class="sidebar-link" href="dashboard-exam-generator.html"><span class="nav-icon" aria-hidden="true">&#128196;</span>Exam Generator</a>
+        <a class="sidebar-link" href="dashboard-progress.html"><span class="nav-icon" aria-hidden="true">&#128200;</span>Progress</a>
+        <a class="sidebar-link" href="dashboard-settings.html"><span class="nav-icon" aria-hidden="true">&#9881;</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-row">
+          <span class="sidebar-user-avatar">JD</span>
+          <div>
+            <h4>John Doe</h4>
+            <p>Student</p>
+          </div>
+        </div>
+        <a class="sidebar-logout sidebar-logout-wide" href="login.html">Logout</a>
+      </div>
+    </aside>
+
+    <section class="student-main home-main">
+      <section class="home-hero">
+        <h2>Welcome back, John!</h2>
+        <p>Continue your learning journey with AI-powered adaptive content</p>
+        <a href="dashboard-learning.html" class="home-cta">Continue Learning</a>
+      </section>
+
+      <section class="home-metrics" aria-label="Student metrics">
+        <article class="home-metric-card">
+          <div class="home-metric-top"><span>Courses</span><i aria-hidden="true">&#128218;</i></div>
+          <h3>12</h3>
+          <p>Courses Active</p>
+        </article>
+        <article class="home-metric-card">
+          <div class="home-metric-top"><span>Questions</span><i aria-hidden="true">&#10003;</i></div>
+          <h3>847</h3>
+          <p>Questions Solved</p>
+        </article>
+        <article class="home-metric-card">
+          <div class="home-metric-top"><span>Streak</span><i aria-hidden="true">&#9889;</i></div>
+          <h3>23</h3>
+          <p>Day Streak</p>
+        </article>
+        <article class="home-metric-card">
+          <div class="home-metric-top"><span>Score</span><i aria-hidden="true">&#9733;</i></div>
+          <h3>86%</h3>
+          <p>Avg. Score</p>
+        </article>
+      </section>
+
+      <section class="home-panels">
+        <article class="panel-card home-panel-left">
+          <header class="panel-head">
+            <h3>Continue Learning</h3>
+            <a href="dashboard-learning.html">View All</a>
+          </header>
+          <div class="home-course-list">
+            <article class="home-course-item">
+              <div>
+                <h4>Advanced JavaScript Patterns</h4>
+                <p>Module 4: Async Programming</p>
+              </div>
+              <span class="home-pill">67%</span>
+            </article>
+            <article class="home-course-item active">
+              <div>
+                <h4>React & TypeScript Mastery</h4>
+                <p>Module 2: Hooks & State</p>
+              </div>
+              <span class="home-pill">42%</span>
+            </article>
+            <article class="home-course-item">
+              <div>
+                <h4>System Design Fundamentals</h4>
+                <p>Module 7: Scaling Strategies</p>
+              </div>
+              <span class="home-pill">89%</span>
+            </article>
+          </div>
+        </article>
+
+        <article class="panel-card home-panel-right">
+          <header class="panel-head">
+            <h3>AI Recommended</h3>
+          </header>
+          <div class="home-reco-list">
+            <article class="home-reco-item">
+              <h4>Python for Data Science</h4>
+              <p>Based on your JavaScript skills</p>
+              <a href="dashboard-learning.html">Start Learning</a>
+            </article>
+            <article class="home-reco-item">
+              <h4>Advanced Git &amp; GitHub</h4>
+              <p>Complement your dev skills</p>
+              <a href="dashboard-learning.html">Start Learning</a>
+            </article>
+          </div>
+        </article>
+      </section>
+
+      <section class="home-exam-cv-grid">
+        <section class="panel-card home-exams">
+          <header class="panel-head">
+            <h3>Upcoming Exams</h3>
+            <a href="dashboard-exam-generator.html">View All</a>
+          </header>
+          <div class="home-exam-list">
+            <article class="home-exam-item">
+              <h4>JavaScript Advanced Concepts</h4>
+              <p>Tomorrow at 10:00 AM</p>
+              <span>30 questions - 45 min</span>
+              <a href="dashboard-exam-generator.html">Prepare Now</a>
+            </article>
+            <article class="home-exam-item">
+              <h4>React Hooks Assessment</h4>
+              <p>Feb 25 at 2:00 PM</p>
+              <span>25 questions - 40 min</span>
+              <a href="dashboard-exam-generator.html">Prepare Now</a>
+            </article>
+            <article class="home-exam-item">
+              <h4>System Design Practice</h4>
+              <p>Feb 28 at 3:30 PM</p>
+              <span>20 questions - 60 min</span>
+              <a href="dashboard-exam-generator.html">Prepare Now</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel-card home-upload-cv">
+          <header class="panel-head">
+            <h3>Upload CV</h3>
+          </header>
+          <div class="home-cv-drop" role="button" tabindex="0" aria-label="Upload CV">
+            <p class="home-cv-title">Drag and drop your resume</p>
+            <p class="home-cv-sub">PDF or DOCX (Max 5 MB)</p>
+            <input id="cvFileInput" class="home-cv-input" type="file" accept=".pdf,.doc,.docx" />
+            <button type="button" class="home-cv-btn" id="cvUploadBtn">Upload Resume</button>
+          </div>
+          <label class="home-cv-role-label" for="cvRoleSelect">Role Applied</label>
+          <select id="cvRoleSelect" class="home-cv-role-select">
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="fullstack">Full Stack Developer</option>
+            <option value="data">Data Analyst</option>
+            <option value="product">Product Manager</option>
+          </select>
+          <p class="home-cv-file" id="cvFileName">No file selected</p>
+          <p class="home-cv-note">Use your CV to get interview-focused practice recommendations.</p>
+          <div class="home-cv-recommendations" id="cvRecommendations" hidden>
+            <h4>CV Update Recommendations</h4>
+            <ul id="cvRecommendationList"></ul>
+          </div>
+        </section>
+      </section>
+
+      <section class="home-bottom-grid">
+        <article class="panel-card home-weekly">
+          <header class="panel-head">
+            <h3>Weekly Progress</h3>
+          </header>
+          <div class="home-week-empty"></div>
+          <div class="home-week-days">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+          <div class="home-week-summary">
+            <div><strong>18.5h</strong><p>This Week</p></div>
+            <div><strong class="up">+23%</strong><p>vs Last Week</p></div>
+          </div>
+        </article>
+
+        <article class="panel-card home-subjects">
+          <header class="panel-head">
+            <h3>Subject Performance</h3>
+          </header>
+          <div class="home-subject-list">
+            <div class="home-subject-row"><div><h4>JavaScript</h4><span>87%</span></div><p><i class="green" style="width:87%"></i></p></div>
+            <div class="home-subject-row"><div><h4>React</h4><span>72%</span></div><p><i class="violet" style="width:72%"></i></p></div>
+            <div class="home-subject-row"><div><h4>TypeScript</h4><span>65%</span></div><p><i class="violet" style="width:65%"></i></p></div>
+            <div class="home-subject-row"><div><h4>Node.js</h4><span>58%</span></div><p><i class="amber" style="width:58%"></i></p></div>
+            <div class="home-subject-row"><div><h4>System Design</h4><span>45%</span></div><p><i class="amber" style="width:45%"></i></p></div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+  </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Admin - Question Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-layout admin-dashboard">
+    <aside class="student-sidebar" aria-label="Sidebar">
+      <div class="sidebar-brand"><span class="sidebar-brand-icon" aria-hidden="true">SF</span><div><h1>SkillForge</h1><p>AI-Powered Learning</p></div></div>
+      <nav class="sidebar-nav" aria-label="Primary">
+        <a class="sidebar-link active" href="admin-dashboard-overview.html"><span class="nav-icon" aria-hidden="true">&#8962;</span>Dashboard</a>
+        <a class="sidebar-link" href="admin-exam-generator.html"><span class="nav-icon" aria-hidden="true">&#128196;</span>Exam Generator</a>
+        <a class="sidebar-link" href="admin-settings.html"><span class="nav-icon" aria-hidden="true">&#9881;</span>Settings</a>
+      </nav>
+      <div class="sidebar-user"><div class="sidebar-user-row"><span class="sidebar-user-avatar">AD</span><div><h4>Admin User</h4><p>Administrator</p></div></div><a class="sidebar-logout sidebar-logout-wide" href="login.html">Logout</a></div>
+    </aside>
+
+    <section class="student-main admin-main admin-subpage">
+      <section class="admin-tabs panel-card">
+        <a class="admin-tab" href="admin-dashboard-overview.html">Overview</a>
+        <a class="admin-tab" href="admin-user-management.html">User Management</a>
+        <a class="admin-tab active" href="admin-question-bank.html">Question Bank</a>
+        <a class="admin-tab" href="admin-analytics.html">Analytics</a>
+      </section>
+
+      <section class="panel-card admin-card admin-toolbar">
+        <select>
+          <option selected>All Topics</option>
+          <option>JavaScript</option>
+          <option>TypeScript</option>
+          <option>React</option>
+          <option>Python</option>
+        </select>
+        <select>
+          <option selected>All Difficulty</option>
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+        <div class="admin-toolbar-actions">
+          <button type="button" class="admin-secondary-btn">&#129302; AI Generate</button>
+          <button type="button" class="admin-primary-btn">+ Add Question</button>
+        </div>
+      </section>
+
+      <section class="panel-card admin-card">
+        <div class="question-item"><div><p class="meta">Q-1234</p><h4>What is the difference between let and const in JavaScript?</h4><span>Used in 234 exams - Created: Jan 15, 2026</span></div><b><span class="admin-actions">&#9998; &#128465;</span></b></div>
+        <div class="question-item"><div><p class="meta">Q-1235</p><h4>Explain the concept of closures in JavaScript</h4><span>Used in 189 exams - Created: Jan 15, 2026</span></div><b><span class="admin-actions">&#9998; &#128465;</span></b></div>
+        <div class="question-item"><div><p class="meta">Q-1236</p><h4>How does virtual DOM improve React performance?</h4><span>Used in 148 exams - Created: Jan 12, 2026</span></div><b><span class="admin-actions">&#9998; &#128465;</span></b></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
+

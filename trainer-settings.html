@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Trainer Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-layout settings-dashboard trainer-settings-page">
+    <aside class="student-sidebar" aria-label="Sidebar">
+      <div class="sidebar-brand">
+        <span class="sidebar-brand-icon" aria-hidden="true">SF</span>
+        <div>
+          <h1>SkillForge</h1>
+          <p>AI-Powered Learning</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <a class="sidebar-link" href="trainer-dashboard.html"><span class="nav-icon" aria-hidden="true">&#8962;</span>Dashboard</a>
+        <a class="sidebar-link" href="trainer-exam-generator.html"><span class="nav-icon" aria-hidden="true">&#128196;</span>Exam Generator</a>
+        <a class="sidebar-link active" href="trainer-settings.html"><span class="nav-icon" aria-hidden="true">&#9881;</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-row">
+          <span class="sidebar-user-avatar">TR</span>
+          <div>
+            <h4>Professor Smith</h4>
+            <p>Trainer</p>
+          </div>
+        </div>
+        <a class="sidebar-logout sidebar-logout-wide" href="login.html">Logout</a>
+      </div>
+    </aside>
+
+    <section class="student-main settings-main">
+      <section class="panel-card settings-card">
+        <header class="panel-head">
+          <h3>Profile Information</h3>
+        </header>
+
+        <div class="profile-head">
+          <span class="profile-avatar">TR</span>
+          <div>
+            <h4>Professor Smith</h4>
+            <p>prof.smith@example.com</p>
+            <a href="#">Change Profile Picture</a>
+          </div>
+        </div>
+
+        <div class="settings-form-grid">
+          <label>Full Name
+            <input type="text" value="Professor Smith" />
+          </label>
+          <label>Email
+            <input type="email" value="prof.smith@example.com" />
+          </label>
+          <label>Role
+            <select>
+              <option>Student</option>
+              <option selected>Trainer</option>
+              <option>Administrator</option>
+            </select>
+          </label>
+          <label>Experience Level
+            <select>
+              <option>Beginner</option>
+              <option selected>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="settings-actions">
+          <button type="button" class="settings-save">Save Changes</button>
+        </div>
+      </section>
+
+      <section class="panel-card settings-card">
+        <header class="panel-head">
+          <h3>Learning Preferences</h3>
+        </header>
+
+        <div class="settings-row">
+          <h4>Daily Learning Goal</h4>
+          <span>30 minutes</span>
+        </div>
+        <input type="range" min="15" max="120" value="30" class="settings-range" />
+        <div class="settings-range-labels"><span>15 min</span><span>120 min</span></div>
+
+        <div class="settings-toggle-row">
+          <div>
+            <h4>Adaptive Difficulty</h4>
+            <p>AI automatically adjusts question difficulty based on your performance</p>
+          </div>
+          <button type="button" class="toggle on" aria-label="Adaptive Difficulty"><span></span></button>
+        </div>
+
+        <div class="settings-topics">
+          <h4>Preferred Learning Topics</h4>
+          <div class="settings-topic-grid">
+            <button type="button" class="topic-btn active">JavaScript</button>
+            <button type="button" class="topic-btn active">React</button>
+            <button type="button" class="topic-btn active">TypeScript</button>
+            <button type="button" class="topic-btn active">Node.js</button>
+            <button type="button" class="topic-btn active">Python</button>
+            <button type="button" class="topic-btn active">System Design</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-card settings-card">
+        <header class="panel-head">
+          <h3>Notifications</h3>
+        </header>
+
+        <div class="settings-toggle-row line">
+          <div>
+            <h4>Email Notifications</h4>
+            <p>Receive learning reminders and progress updates via email</p>
+          </div>
+          <button type="button" class="toggle on" aria-label="Email Notifications"><span></span></button>
+        </div>
+
+        <div class="settings-toggle-row line">
+          <div>
+            <h4>Push Notifications</h4>
+            <p>Get instant notifications for new content and achievements</p>
+          </div>
+          <button type="button" class="toggle on" aria-label="Push Notifications"><span></span></button>
+        </div>
+
+        <div class="settings-toggle-row">
+          <div>
+            <h4>Weekly Progress Report</h4>
+            <p>Receive a summary of your weekly progress every Sunday</p>
+          </div>
+          <button type="button" class="toggle on" aria-label="Weekly Progress Report"><span></span></button>
+        </div>
+      </section>
+
+      <section class="panel-card settings-card">
+        <header class="panel-head ai-settings-head">
+          <h3>AI Settings</h3>
+        </header>
+
+        <div class="settings-toggle-row line">
+          <div>
+            <h4>Smart Recommendations</h4>
+            <p>Get personalized topic and exam recommendations</p>
+          </div>
+          <button type="button" class="toggle on" aria-label="Smart Recommendations"><span></span></button>
+        </div>
+
+        <div class="settings-toggle-row line">
+          <div>
+            <h4>Auto-Generate Practice Exams</h4>
+            <p>Automatically create exams for topics you're struggling with</p>
+          </div>
+          <button type="button" class="toggle on" aria-label="Auto-Generate Practice Exams"><span></span></button>
+        </div>
+
+        <div class="settings-toggle-row">
+          <div>
+            <h4>Instant Hints</h4>
+            <p>Show AI-powered hints when you're stuck on a question</p>
+          </div>
+          <button type="button" class="toggle on" aria-label="Instant Hints"><span></span></button>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

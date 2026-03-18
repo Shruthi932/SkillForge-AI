@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+<script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-layout admin-dashboard">
+    <aside class="student-sidebar" aria-label="Sidebar">
+      <div class="sidebar-brand">
+        <span class="sidebar-brand-icon" aria-hidden="true">SF</span>
+        <div>
+          <h1>SkillForge</h1>
+          <p>AI-Powered Learning</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <a class="sidebar-link active" href="admin-dashboard-overview.html"><span class="nav-icon" aria-hidden="true">&#8962;</span>Dashboard</a>
+        <a class="sidebar-link" href="admin-exam-generator.html"><span class="nav-icon" aria-hidden="true">&#128196;</span>Exam Generator</a>
+        <a class="sidebar-link" href="admin-settings.html"><span class="nav-icon" aria-hidden="true">&#9881;</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-row">
+          <span class="sidebar-user-avatar">AD</span>
+          <div>
+            <h4>Admin User</h4>
+            <p>Administrator</p>
+          </div>
+        </div>
+        <a class="sidebar-logout sidebar-logout-wide" href="login.html" id="adminLogout">Logout</a>
+      </div>
+    </aside>
+
+    <section class="student-main admin-main">
+      <section class="admin-hero">
+        <h2>Admin Dashboard</h2>
+        <p>Manage users, question bank, and monitor platform analytics</p>
+      </section>
+
+      <section class="admin-tabs panel-card">
+        <a class="admin-tab active" href="admin-dashboard-overview.html">Overview</a>
+        <a class="admin-tab" href="admin-user-management.html">User Management</a>
+        <a class="admin-tab" href="admin-question-bank.html">Question Bank</a>
+        <a class="admin-tab" href="admin-analytics.html">Analytics</a>
+      </section>
+
+      <section class="admin-kpis" data-dynamic="admin-kpis">
+        <article class="admin-kpi-card">
+          <div class="admin-kpi-head"><p>Total Users</p><span class="admin-kpi-icon" aria-hidden="true">&#128101;</span></div>
+          <h3>10,234</h3>
+          <span class="up">+12% this month</span>
+        </article>
+        <article class="admin-kpi-card">
+          <div class="admin-kpi-head"><p>Exams Generated</p><span class="admin-kpi-icon" aria-hidden="true">&#128221;</span></div>
+          <h3>52,487</h3>
+          <span class="up">+8% this month</span>
+        </article>
+        <article class="admin-kpi-card">
+          <div class="admin-kpi-head"><p>Question Bank</p><span class="admin-kpi-icon" aria-hidden="true">&#10067;</span></div>
+          <h3>8,542</h3>
+          <span>AI Generated: 3,245</span>
+        </article>
+        <article class="admin-kpi-card">
+          <div class="admin-kpi-head"><p>Avg. Pass Rate</p><span class="admin-kpi-icon" aria-hidden="true">&#128200;</span></div>
+          <h3>87.3%</h3>
+          <span class="up">+2.3% improvement</span>
+        </article>
+      </section>
+
+      <section class="admin-grid-top">
+        <article class="panel-card admin-card">
+        <header class="panel-head"><h3>User Growth (Last 7 Days)</h3></header>
+          <div class="chart-container">
+            <canvas></canvas>
+          </div>
+          <div class="admin-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+        </article>
+
+        <article class="panel-card admin-card">
+          <header class="panel-head"><h3>Popular Exam Categories</h3></header>
+          <div class="admin-category-list">
+            <div class="category-row"><span>JavaScript</span><span>15,234 exams</span></div>
+            <p><i style="width:85%"></i></p>
+            <div class="category-row"><span>React</span><span>11,002 exams</span></div>
+            <p><i style="width:72%"></i></p>
+            <div class="category-row"><span>Python</span><span>9,831 exams</span></div>
+            <p><i style="width:64%"></i></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel-card admin-card">
+        <header class="panel-head"><h3>Recent System Activity</h3></header>
+        <div class="admin-activity-list" data-dynamic="activity"></div>
+      </section>
+    </section>
+  </main>
+  </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Progress Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="auth.js"></script>
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-layout progress-dashboard">
+    <aside class="student-sidebar" aria-label="Sidebar">
+      <div class="sidebar-brand">
+        <span class="sidebar-brand-icon" aria-hidden="true">SF</span>
+        <div>
+          <h1>SkillForge</h1>
+          <p>AI-Powered Learning</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <a class="sidebar-link" href="dashboard.html"><span class="nav-icon" aria-hidden="true">&#8962;</span>Dashboard</a>
+        <a class="sidebar-link" href="dashboard-learning.html"><span class="nav-icon" aria-hidden="true">&#128214;</span>Learning</a>
+        <a class="sidebar-link" href="dashboard-exam-generator.html"><span class="nav-icon" aria-hidden="true">&#128196;</span>Exam Generator</a>
+        <a class="sidebar-link active" href="dashboard-progress.html"><span class="nav-icon" aria-hidden="true">&#128200;</span>Progress</a>
+        <a class="sidebar-link" href="dashboard-settings.html"><span class="nav-icon" aria-hidden="true">&#9881;</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-row">
+          <span class="sidebar-user-avatar">JD</span>
+          <div>
+            <h4>John Doe</h4>
+            <p>Student</p>
+          </div>
+        </div>
+        <a class="sidebar-logout sidebar-logout-wide" href="login.html" id="progressLogout">Logout</a>
+      </div>
+    </aside>
+
+    <section class="student-main progress-main">
+      <section class="progress-kpis" aria-label="Progress highlights">
+        <article class="kpi-card kpi-blue">
+          <p>Total Learning Time</p>
+          <h3>127.5h</h3>
+          <span>+12.5h this week</span>
+        </article>
+        <article class="kpi-card kpi-green">
+          <p>Exams Completed</p>
+          <h3>48</h3>
+          <span>Average score: 86%</span>
+        </article>
+        <article class="kpi-card kpi-violet">
+          <p>Skills Mastered</p>
+          <h3>12</h3>
+          <span>5 in progress</span>
+        </article>
+        <article class="kpi-card kpi-amber">
+          <p>Current Streak</p>
+          <h3>23 days</h3>
+          <span>Best: 45 days</span>
+        </article>
+      </section>
+
+      <section class="progress-top-grid">
+        <article class="panel-card weekly-card">
+          <header class="panel-head">
+            <h3>Weekly Activity</h3>
+            <div class="week-switch">
+              <button type="button" class="active">This Week</button>
+              <button type="button">Last Week</button>
+            </div>
+          </header>
+
+          <div class="week-chart-area"></div>
+          <div class="week-days">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+
+          <div class="week-summary">
+            <div>
+              <strong>20.1h</strong>
+              <p>This Week</p>
+            </div>
+            <div>
+              <strong>2.9h</strong>
+              <p>Daily Average</p>
+            </div>
+            <div>
+              <strong class="up">+15%</strong>
+              <p>vs Last Week</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel-card achievements-card">
+          <header class="panel-head">
+            <h3>Recent Achievements</h3>
+          </header>
+
+          <div class="achievement-list">
+            <article class="achievement-item gold">
+              <div>
+                <h4>Week Warrior</h4>
+                <p>Complete 7 days of learning in a row</p>
+                <span>Earned 2 days ago</span>
+              </div>
+            </article>
+
+            <article class="achievement-item blue">
+              <div>
+                <h4>Perfect Score</h4>
+                <p>Score 100% on any exam</p>
+                <span>Earned 5 days ago</span>
+              </div>
+            </article>
+
+            <article class="achievement-item violet">
+              <div>
+                <h4>Quick Learner</h4>
+                <p>Complete a module in under 2 hours</p>
+                <span>Earned 1 week ago</span>
+              </div>
+            </article>
+
+            <article class="achievement-item outline">
+              <div>
+                <h4>Master Mind</h4>
+                <p>Master 5 different topics</p>
+                <div class="mini-track"><span style="width:60%"></span></div>
+                <span>3/5 completed</span>
+              </div>
+            </article>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel-card mastery-card">
+        <header class="panel-head">
+          <h3>Topic Mastery</h3>
+        </header>
+
+        <div class="mastery-list">
+          <article class="mastery-row">
+            <div>
+              <h4>JavaScript <b>Expert</b></h4>
+              <p>245 questions solved</p>
+            </div>
+            <div class="mastery-score"><strong>87%</strong><span>Mastery</span></div>
+            <div class="mastery-track"><span class="green" style="width:87%"></span></div>
+          </article>
+
+          <article class="mastery-row">
+            <div>
+              <h4>React</h4>
+              <p>189 questions solved</p>
+            </div>
+            <div class="mastery-score"><strong>72%</strong><span>Mastery</span></div>
+            <div class="mastery-track"><span class="blue" style="width:72%"></span></div>
+          </article>
+
+          <article class="mastery-row">
+            <div>
+              <h4>TypeScript</h4>
+              <p>142 questions solved</p>
+            </div>
+            <div class="mastery-score"><strong>65%</strong><span>Mastery</span></div>
+            <div class="mastery-track"><span class="blue" style="width:65%"></span></div>
+          </article>
+
+          <article class="mastery-row">
+            <div>
+              <h4>Node.js</h4>
+              <p>98 questions solved</p>
+            </div>
+            <div class="mastery-score"><strong>58%</strong><span>Mastery</span></div>
+            <div class="mastery-track"><span class="amber" style="width:58%"></span></div>
+          </article>
+
+          <article class="mastery-row">
+            <div>
+              <h4>System Design</h4>
+              <p>76 questions solved</p>
+            </div>
+            <div class="mastery-score"><strong>45%</strong><span>Mastery</span></div>
+            <div class="mastery-track"><span class="amber" style="width:45%"></span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel-card results-card">
+        <header class="panel-head">
+          <h3>Recent Exam Results</h3>
+        </header>
+
+        <div class="results-table-wrap">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Exam Name</th>
+                <th>Score</th>
+                <th>Questions</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>JavaScript Advanced</td>
+                <td class="score green">92%</td>
+                <td>25</td>
+                <td>2 days ago</td>
+                <td><span class="status pass">Passed</span></td>
+              </tr>
+              <tr>
+                <td>React Hooks Deep Dive</td>
+                <td class="score blue">78%</td>
+                <td>30</td>
+                <td>5 days ago</td>
+                <td><span class="status pass">Passed</span></td>
+              </tr>
+              <tr>
+                <td>TypeScript Generics</td>
+                <td class="score blue">65%</td>
+                <td>20</td>
+                <td>1 week ago</td>
+                <td><span class="status review">Review</span></td>
+              </tr>
+              <tr>
+                <td>Async Programming</td>
+                <td class="score green">88%</td>
+                <td>25</td>
+                <td>1 week ago</td>
+                <td><span class="status pass">Passed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script>
+    // Authentication check - redirect to login if not authenticated
+    (function() {
+      var user = window.SkillForgeAuth.requireAuth();
+      if (!user) return;
+      
+      // Update UI with user info
+      var avatar = document.querySelector('.sidebar-user-avatar');
+      var userName = document.querySelector('.sidebar-user h4');
+      var userRole = document.querySelector('.sidebar-user p');
+      
+      if (avatar && user.name) {
+        avatar.textContent = user.name.split(' ').map(function(n) { return n[0]; }).join('').toUpperCase().slice(0, 2);
+      }
+      if (userName) userName.textContent = user.name;
+      if (userRole) userRole.textContent = user.role;
+      
+      // Update logout link
+      var logoutLink = document.getElementById('progressLogout');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.SkillForgeAuth.logout();
+          window.location.href = 'login.html';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+
+

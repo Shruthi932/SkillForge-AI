@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Trainer - Exam Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-body">
+  <main class="dashboard-layout exam-generator-dashboard trainer-exam-page">
+    <aside class="student-sidebar" aria-label="Sidebar">
+      <div class="sidebar-brand">
+        <span class="sidebar-brand-icon" aria-hidden="true">SF</span>
+        <div>
+          <h1>SkillForge</h1>
+          <p>AI-Powered Learning</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <a class="sidebar-link" href="trainer-dashboard.html"><span class="nav-icon" aria-hidden="true">&#8962;</span>Dashboard</a>
+        <a class="sidebar-link active" href="trainer-exam-generator.html"><span class="nav-icon" aria-hidden="true">&#128196;</span>Exam Generator</a>
+        <a class="sidebar-link" href="trainer-settings.html"><span class="nav-icon" aria-hidden="true">&#9881;</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="sidebar-user-row">
+          <span class="sidebar-user-avatar">TR</span>
+          <div>
+            <h4>Professor Smith</h4>
+            <p>Trainer</p>
+          </div>
+        </div>
+        <a class="sidebar-logout sidebar-logout-wide" href="login.html">Logout</a>
+      </div>
+    </aside>
+
+    <section class="student-main exam-main">
+      <section class="exam-hero">
+        <div class="exam-hero-icon" aria-hidden="true">AI</div>
+        <div>
+          <h2>AI Exam Generator</h2>
+          <p>Create personalized exams tailored to your skill level</p>
+        </div>
+      </section>
+
+      <section class="panel-card exam-config" aria-label="Exam Configuration">
+        <header class="panel-head">
+          <h3>Exam Configuration</h3>
+        </header>
+
+        <div class="config-block">
+          <h4>Select Topics (Choose at least one)</h4>
+          <div class="topic-grid">
+            <button type="button" class="select-card active"><span><i class="card-icon" aria-hidden="true">&#128220;</i>JavaScript</span><b>On</b></button>
+            <button type="button" class="select-card active"><span><i class="card-icon" aria-hidden="true">&#9883;</i>React</span><b>On</b></button>
+            <button type="button" class="select-card"><span><i class="card-icon" aria-hidden="true">&#9670;</i>TypeScript</span></button>
+            <button type="button" class="select-card"><span><i class="card-icon" aria-hidden="true">&#9679;</i>Node.js</span></button>
+            <button type="button" class="select-card"><span><i class="card-icon" aria-hidden="true">&#128451;</i>Databases</span></button>
+            <button type="button" class="select-card"><span><i class="card-icon" aria-hidden="true">&#127959;</i>System Design</span></button>
+          </div>
+        </div>
+
+        <div class="config-block">
+          <h4>Difficulty Level</h4>
+          <div class="level-grid">
+            <button type="button" class="level-card"><span class="level-icon" aria-hidden="true">&#127793;</span>Beginner</button>
+            <button type="button" class="level-card active"><span class="level-icon" aria-hidden="true">&#127807;</span>Intermediate</button>
+            <button type="button" class="level-card"><span class="level-icon" aria-hidden="true">&#127794;</span>Advanced</button>
+          </div>
+        </div>
+
+        <div class="config-block">
+          <h4>Number of Questions: <span>20</span></h4>
+          <input type="range" min="5" max="50" value="20" aria-label="Number of Questions" />
+          <div class="range-labels"><span>5 questions</span><span>50 questions</span></div>
+        </div>
+
+        <div class="config-block">
+          <h4>Time Limit: <span>30 minutes</span></h4>
+          <input type="range" min="10" max="120" value="30" aria-label="Time Limit" />
+          <div class="range-labels"><span>10 min</span><span>120 min</span></div>
+        </div>
+
+        <div class="config-block">
+          <h4>Exam Type</h4>
+          <div class="type-grid">
+            <button type="button" class="type-card active">
+              <strong>Multiple Choice</strong>
+              <p>Traditional MCQ format</p>
+            </button>
+            <button type="button" class="type-card muted">
+              <strong>Coding Challenge</strong>
+              <p>Coming soon</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-card recommendation-card">
+        <header class="recommend-head">
+          <span class="recommend-icon" aria-hidden="true">AI</span>
+          <h3>AI Recommendation</h3>
+        </header>
+        <p>
+          Based on your learning history and recent performance, we recommend an
+          <strong>Intermediate level</strong> exam with <strong>25 questions</strong> focusing on
+          <strong>JavaScript and React</strong>.
+        </p>
+        <a href="#">Apply Recommendation -></a>
+      </section>
+
+      <section class="panel-card generate-card">
+        <div>
+          <p class="generate-note">Ready to generate</p>
+          <h3>2 topics - 20 questions - 30 minutes</h3>
+        </div>
+        <button type="button" class="generate-btn">Generate Exam with AI</button>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
