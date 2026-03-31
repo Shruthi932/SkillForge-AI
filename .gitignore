@@ -1,0 +1,9 @@
+backend/target/
+*.log
+.idea/
+.vscode/
+.env
+.env.*
+backend/.env
+backend/.env.*
+backend/src/main/resources/application-local.properties

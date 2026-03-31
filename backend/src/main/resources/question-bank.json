@@ -1,0 +1,128 @@
+[
+  {
+    "topic": "JavaScript",
+    "difficulty": "Beginner",
+    "questionText": "What is the difference between var, let, and const in JavaScript?",
+    "usageCount": 245
+  },
+  {
+    "topic": "JavaScript",
+    "difficulty": "Intermediate",
+    "questionText": "How does event delegation improve performance in dynamic web applications?",
+    "usageCount": 198
+  },
+  {
+    "topic": "JavaScript",
+    "difficulty": "Advanced",
+    "questionText": "Explain closures in JavaScript and describe one real-world use case.",
+    "usageCount": 221
+  },
+  {
+    "topic": "React",
+    "difficulty": "Beginner",
+    "questionText": "What problem does React solve compared to manual DOM manipulation?",
+    "usageCount": 164
+  },
+  {
+    "topic": "React",
+    "difficulty": "Intermediate",
+    "questionText": "How does the virtual DOM improve rendering efficiency in React?",
+    "usageCount": 176
+  },
+  {
+    "topic": "React",
+    "difficulty": "Advanced",
+    "questionText": "When would you use context versus prop drilling versus a dedicated state library in React?",
+    "usageCount": 128
+  },
+  {
+    "topic": "TypeScript",
+    "difficulty": "Beginner",
+    "questionText": "What advantages does TypeScript offer over plain JavaScript in large projects?",
+    "usageCount": 144
+  },
+  {
+    "topic": "TypeScript",
+    "difficulty": "Intermediate",
+    "questionText": "How do union types and type narrowing help build safer APIs in TypeScript?",
+    "usageCount": 119
+  },
+  {
+    "topic": "TypeScript",
+    "difficulty": "Advanced",
+    "questionText": "Explain generics in TypeScript and how they improve code reuse.",
+    "usageCount": 105
+  },
+  {
+    "topic": "Node.js",
+    "difficulty": "Beginner",
+    "questionText": "Why is Node.js considered well-suited for I/O-heavy workloads?",
+    "usageCount": 111
+  },
+  {
+    "topic": "Node.js",
+    "difficulty": "Intermediate",
+    "questionText": "How does the event loop handle asynchronous operations in Node.js?",
+    "usageCount": 163
+  },
+  {
+    "topic": "Node.js",
+    "difficulty": "Advanced",
+    "questionText": "What are streams in Node.js, and when would you choose them over reading entire files into memory?",
+    "usageCount": 92
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Beginner",
+    "questionText": "How do lists differ from tuples in Python?",
+    "usageCount": 134
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Intermediate",
+    "questionText": "What are list comprehensions in Python, and why are they useful?",
+    "usageCount": 151
+  },
+  {
+    "topic": "Python",
+    "difficulty": "Advanced",
+    "questionText": "Explain decorators in Python and give one example of where they are useful.",
+    "usageCount": 97
+  },
+  {
+    "topic": "Databases",
+    "difficulty": "Beginner",
+    "questionText": "What is the difference between a primary key and a foreign key?",
+    "usageCount": 173
+  },
+  {
+    "topic": "Databases",
+    "difficulty": "Intermediate",
+    "questionText": "Why are indexes useful in relational databases, and what tradeoff do they introduce?",
+    "usageCount": 142
+  },
+  {
+    "topic": "Databases",
+    "difficulty": "Advanced",
+    "questionText": "How do transaction isolation levels help prevent concurrency issues in databases?",
+    "usageCount": 88
+  },
+  {
+    "topic": "System Design",
+    "difficulty": "Beginner",
+    "questionText": "What is horizontal scaling, and how is it different from vertical scaling?",
+    "usageCount": 108
+  },
+  {
+    "topic": "System Design",
+    "difficulty": "Intermediate",
+    "questionText": "Why is caching useful in distributed systems, and where can it be applied?",
+    "usageCount": 124
+  },
+  {
+    "topic": "System Design",
+    "difficulty": "Advanced",
+    "questionText": "How would you design a rate-limiting system for a high-traffic API?",
+    "usageCount": 79
+  }
+]
